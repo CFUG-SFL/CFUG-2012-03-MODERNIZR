@@ -102,13 +102,13 @@
                         <strong>Example #1</strong>
                         <span>In this example we check if the browser supports the canvas element and if so we set the innerHTML text value of a dom element and the style of the page is set using Modernizr's css helpers.</span>
                         <a href="./examples/modernizr/example1.html" target="_blank"><span>open example</span></a>
-                        <a href="" target="_blank"><span>view on github</span></a>
+                        <a href="https://github.com/GiancarloGomez/cfug-sfl-2012.03.29-modernizr/blob/master/examples/modernizr/example1.html" target="_blank"><span>view on github</span></a>
                     </li>
                     <li>
                         <strong>Example #2</strong>
                         <span>In this example we check if the browser supports the HTML5 input date type. If not we use the jQuery UI version as a fallback. Like example 1 we set the message to dom element and the styles are controlled by css rules.</span>
                         <a href="./examples/modernizr/example2.html" target="_blank"><span>open example</span></a>
-                        <a href="" target="_blank"><span>view on github</span></a>
+                        <a href="https://github.com/GiancarloGomez/cfug-sfl-2012.03.29-modernizr/blob/master/examples/modernizr/example2.html" target="_blank"><span>view on github</span></a>
                     </li>
                 </ol>
         	</q>
@@ -151,7 +151,7 @@
                         <strong>Example #1</strong>
                         <span>In this example we see how easily we can add placeholders and simple validation to our HTML5 forms</span>
                         <a href="./examples/html5/example1.html" target="_blank"><span>open example</span></a>
-                        <a href="" target="_blank"><span>view on github</span></a>
+                        <a href="https://github.com/GiancarloGomez/cfug-sfl-2012.03.29-modernizr/blob/master/examples/html5/example1.html" target="_blank"><span>view on github</span></a>
                     </li>
                     <li>
                         <strong>Example #2</strong>
@@ -160,7 +160,7 @@
                             <br /><strong class="red">REQUIREMENTS: ColdFusion 10 and a modern browser that supports drag and drop and XHR2</strong>
                         </span>
                         <a href="./examples/html5/uploader/" target="_blank"><span>open example</span></a>
-                        <a href="" target="_blank"><span>view on github</span></a>
+                        <a href="https://github.com/GiancarloGomez/cfug-sfl-2012.03.29-modernizr/blob/master/examples/html5/uploader/" target="_blank"><span>view on github</span></a>
                     </li>
                 </ol>
             </q>
