@@ -1,0 +1,4 @@
+*.DS_Store
+examples/html5/uploader/uploads/
+
+!examples/html5/uploader/uploads/readme

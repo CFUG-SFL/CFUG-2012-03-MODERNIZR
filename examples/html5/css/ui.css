@@ -1,0 +1,165 @@
+#dropbox{
+	background-color:#fff;
+	border-radius:0 0 1em 1em;
+	margin:0 1em;
+	padding: 1em 0;
+	text-align:center;
+	font-size:2em;
+	width:auto;
+	-webkit-transition-property: all;  
+		-webkit-transition-duration: 1s;  
+}
+#dropbox.over{
+	background-color:green;
+	color:#fff;
+	-webkit-transition-property: all;  
+		-webkit-transition-duration: 1s;  
+}
+#preview,
+#progress{
+	width:auto;
+	margin:1em 3em;
+}
+#preview h2{
+	border-bottom:2px solid #fff;
+	margin:0 0 .3em 0;
+	padding:0 0 .3em 0;
+}
+#preview div{
+	border:5px solid #fff;
+	box-shadow:0 0 5px rgba(0,0,0,.5);
+	margin:0 5px 5px 0;
+	display:block;
+	float:left;
+	cursor:pointer;
+	position:relative;
+}
+#preview div img{
+	display:block;
+	margin:0;
+	height:160px;
+	width:160px;
+}
+#preview div div{
+	position: absolute;
+	left:0;
+	width:100%;
+	bottom:0;
+	padding:.5em 0;
+	margin:0;
+	background:rgba(0,0,0,.5);
+	border:none;
+	box-shadow:none;
+	text-align: center;
+	text-decoration:none;
+	color:#fff;
+
+	opacity:0;
+
+    -webkit-transition: opacity .25s;
+    -moz-transition:    opacity .25s;
+    -ms-transition:     opacity .25s;
+    -o-transition:      opacity .25s;
+    transition:         opacity .25s;
+}
+#preview div div a{
+	color:#fff;	
+	text-decoration:underline;
+}
+#preview div div a:hover{
+	color:#eee;
+}
+#preview div:hover div{
+	display:block;
+
+	opacity:1;
+
+    -webkit-transition: opacity .25s;
+    -moz-transition:    opacity .25s;
+    -ms-transition:     opacity .25s;
+    -o-transition:      opacity .25s;
+    transition:         opacity .25s;
+}
+#preview #noimages{
+	display:none;
+	border:0;
+	box-shadow:none;
+	color:#c00;
+	font-size:1.4em;
+	line-height:1.4em;
+	padding:1em;
+	text-align: center;
+	float:none;
+}
+.row{
+	background:white;
+	border-radius:1em;
+	padding:.5em 1em;
+	position:relative;
+}
+.bar{
+	background:green;
+	height:10px;
+	margin:5px 0;
+	width:0;
+}
+.process{
+	position:absolute;
+	right:1em;
+	top:.5em;
+}
+#overlay{
+	display:none;
+	position:absolute;
+	background:rgba(0,0,0,.25);
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+}
+#lightbox{
+	position:absolute;
+	top:0;
+	left:0;
+	width:80%;
+	height:80%;
+	margin:10%;
+	display:none;
+	text-align: center;
+}
+#lightbox a{
+	text-align:center;
+	display: block;
+	height:1em;
+	color:#fff;
+	margin-top:.5em;
+}
+#lightbox a:hover{
+	color:#c00;
+}
+#lightbox img{
+	max-width:100%;
+	max-height:100%;
+	border:5px solid #fff;
+}
+/* support rules */
+#ui,
+#notsupported{
+	display:none;
+}
+.no-draganddrop body,
+.min-cf {
+	background:#c00;
+}
+.min-cf #notsupported,
+.no-draganddrop #notsupported{
+	display:block !important;
+	color:#fff;
+	font-size:2em;
+	line-height:1.4em;
+	position: absolute;
+	text-align:center;
+	top:50%;
+	margin-top:-2em;
+	width:100%;
+}

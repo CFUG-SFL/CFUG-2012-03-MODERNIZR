@@ -1,0 +1,469 @@
+body {
+    font-family: 'Ubuntu', sans-serif;
+    
+    min-height: 1024px;
+    background: rgb(217,221,226);
+    background: -moz-linear-gradient(top,  rgb(217,221,226) 0%, rgb(228,231,235) 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgb(217,221,226)), color-stop(100%,rgb(228,231,235)));
+    background: -webkit-linear-gradient(top,  rgb(217,221,226) 0%,rgb(228,231,235) 100%);
+    background: -o-linear-gradient(top,  rgb(217,221,226) 0%,rgb(228,231,235) 100%);
+    background: -ms-linear-gradient(top,  rgb(217,221,226) 0%,rgb(228,231,235) 100%);
+    background: linear-gradient(top,  rgb(217,221,226) 0%,rgb(228,231,235) 100%);
+    
+    /*background: rgb(215, 215, 215);
+    background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 500, from(rgb(240, 240, 240)), to(rgb(190, 190, 190)));
+    background: -webkit-radial-gradient(rgb(240, 240, 240), rgb(190, 190, 190));
+    background:    -moz-radial-gradient(rgb(240, 240, 240), rgb(190, 190, 190));
+    background:      -o-radial-gradient(rgb(240, 240, 240), rgb(190, 190, 190));
+    background:         radial-gradient(rgb(240, 240, 240), rgb(190, 190, 190));*/
+
+    -webkit-font-smoothing: antialiased;
+}
+
+b, strong { font-weight: bold }
+i, em { font-style: italic}
+
+a {
+    color: #c00;
+    text-decoration: none;
+    padding: 0 0.1em;
+    /*background: rgba(255,255,255,0.5);*/
+    text-shadow: -1px -1px 2px rgba(100,100,100,0.9);
+    border-radius: 0.2em;
+    
+    -webkit-transition: 0.5s;
+    -moz-transition:    0.5s;
+    -ms-transition:     0.5s;
+    -o-transition:      0.5s;
+    transition:         0.5s;
+}
+
+a:hover {
+    /*background: rgba(255,255,255,1);*/
+    text-shadow: -1px -1px 2px rgba(100,100,100,0.5);
+}
+
+h1 {
+    font-size: 1.6em;
+    font-weight: 500;
+    line-height:1em;
+    margin: 0 0 0.67em 0;
+}
+small{
+    color:#ddd;
+    display: block;
+}
+
+/* enable clicking on elements 'hiding' behind body in 3D */
+body     { pointer-events: none; }
+#impress { pointer-events: auto;}
+#presentation-title{
+  font-family: 'Allerta Stencil', sans-serif;
+  font-size:1.5em;
+  position: absolute;
+  top:40%;
+  left:-10%;
+  width:120%;
+  padding:1em 0;
+  text-align:center;
+  background:rgba(200,200,200,.2);
+  -webkit-transform:rotate(-18deg);
+  -moz-transform:rotate(-18deg);
+}
+#badge{
+    background-image:url(../img/user_group_badge.png);
+    background-repeat:no-repeat;
+    background-position:0 0;
+    height:44px;
+    position: absolute;
+    width:250px;
+    top:0px;
+    left:0px;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+#author{
+    background:rgba(0,0,0,.4);
+    bottom:0;
+    color: #eee;
+    font-family: 'Inconsolata', sans-serif;
+    font-size:14px;
+    padding: 1em;
+    position:absolute;
+    text-align:center;
+    width:100%;
+}
+#author,
+#badge{
+    z-index:2000 !important;
+}
+
+/* COMMON STEP STYLES */
+
+.step {
+    width: 1200px;
+    padding: 40px;
+
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing:    border-box;
+    -ms-box-sizing:     border-box;
+    -o-box-sizing:      border-box;
+    box-sizing:         border-box;
+
+    font-size: 48px;
+    line-height: 1.5;
+}
+
+.step,
+.step .hint {
+    -webkit-transition: opacity 1s;
+    -moz-transition:    opacity 1s;
+    -ms-transition:     opacity 1s;
+    -o-transition:      opacity 1s;
+    transition:         opacity 1s;
+}
+
+/* fade out inactive slides */
+.step:not(.active) {
+  opacity:.3;
+}
+.step:not(.active) .hint{
+    opacity: .1;
+}
+
+.active{
+    z-index:1000;
+}
+
+/* STEP SPECIFIC STYLES */
+
+/* hint on the first slide */
+
+.hint {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 1.4em;
+    
+    background: rgba(45,142,157,0.5);
+    color: #EEE;
+    text-align: center;
+    font-size:2em;
+    line-height:1em;
+    
+    padding:0.5em;
+    
+    z-index: 100;
+    
+    opacity: 0;
+
+    text-shadow:0 0 5px rgba(0,0,0,.5);
+    
+    -webkit-transition: opacity 1s;
+    -moz-transition:    opacity 1s;
+    -ms-transition:     opacity 1s;
+    -o-transition:      opacity 1s;
+    transition:         opacity 1s;
+}
+
+.impress-on-cover .hint {
+    opacity: 1;
+    
+    -webkit-transition: opacity 1s;
+    -moz-transition:    opacity 1s;
+    -ms-transition:     opacity 1s;
+    -o-transition:      opacity 1s;
+    transition:         opacity 1s;
+    
+}
+
+.clue {    
+    background: rgba(240,255,255,.9);
+    box-shadow:0 0 5px rgba(95,158,160, .8);
+    border-radius:1em;
+    color: #333;
+    font-size: .7em;
+    font-style: italic;
+    line-height:1.4em;
+    margin:.5em;
+    padding: 1em;
+    text-align: left;
+}
+
+/* overview step */
+
+#overview {
+    z-index: -1;
+    padding: 0;
+}
+
+/* on overview step everything is visible */
+
+.impress-on-overview .step {
+    opacity: 1;
+    cursor: pointer;
+}
+
+/*
+ * SLIDE STEP STYLES
+ *
+ * inspired by: http://html5slides.googlecode.com/svn/trunk/styles.css
+ *
+ * ;)
+ */
+
+.slide {
+    display: block;
+
+    width: 1200px;
+    height: 600px;
+
+    padding: 2em 2.5em;
+
+    background: #fff;
+    border: 2px solid rgba(0, 0, 0, .3);
+    box-shadow: 5px 5px 5px rgba(0,0,0,.2);
+
+    color: rgb(102, 102, 102);
+    text-shadow: 0 2px 2px rgba(0, 0, 0, .1);
+
+    font-size: 20px;
+    line-height: 1.4em;
+
+    border-radius:.5em;
+
+    overflow: hidden;
+
+    /*letter-spacing: -1px;*/
+}
+
+.slide q {
+    display: block;
+    font-size: 1.4em;
+    line-height: 1.4em;
+    font-weight:300;
+    margin:0 .5em;
+}
+
+.slide q strong {
+    white-space: nowrap;
+    font-weight:700;
+}
+
+.slide .medium{
+    font-size:.9em;
+    line-height:1.4em;
+}
+
+.slide .small{
+    font-size:.7em;
+    line-height:1.4em;
+}
+
+
+/* IMPRESS NOT SUPPORTED STYLES */
+
+.fallback-message {
+    font-family: sans-serif;
+    line-height: 1.3;
+    
+    display: none;
+    width: 780px;
+    padding: 10px 10px 0;
+    margin: 20px auto;
+
+    border-radius: 10px;
+    border: 1px solid #E4C652;
+    background: #EEDC94;
+}
+
+.fallback-message p {
+    margin-bottom: 10px;
+}
+
+.impress-disabled .step,
+.impress-not-supported .step {
+    position: relative;
+    opacity: 1;
+    margin: 20px auto;
+}
+
+.impress-not-supported .fallback-message {
+    display: block;
+}
+
+#classes ul
+{
+  clear: both;
+  list-style: none;
+  margin: 40px auto 0 auto;
+  height:90px;
+  padding: 0;
+  position: relative;
+  z-index: 2;
+  font-size:12px;
+  line-height:1em;
+  width:1000px;
+}
+
+#classes li
+{
+  background:#f1f1f1;
+  float: left;
+  margin: 0 8px 0 0;
+  padding: 15px 0px 0px 0px;
+  width: 90px;
+  height:75px;
+  cursor:pointer;
+  border:1px solid #ddd;
+  overflow: hidden;
+}
+#classes li h3{
+    margin-top:0;
+}
+#classes li a
+{
+  background-image: url(../img/homepage_feature_icons.png);
+  background-repeat: no-repeat;
+  background-color:transparent;
+  color: #333;
+  display: block;
+  text-align: center;
+  width: 90px;
+  padding-bottom: 50px;
+}
+
+#classes li a:hover,
+#classes li a:focus
+{
+  color: #5FA4A0;
+}
+
+#classes li.offline a              { background-position: left   25px; }
+#classes li.storage a              { background-position: left -117px; }
+#classes li.connectivity a         { background-position: left -258px; }
+#classes li.file_access a          { background-position: left -399px; }
+#classes li.semantics a            { background-position: left -540px; }
+#classes li.multimedia a           { background-position: left -681px; }
+#classes li.graphics a             { background-position: left -822px; }
+#classes li.presentation a         { background-position: left -963px; }
+#classes li.performance a          { background-position: left -1104px; }
+#classes li.nuts_and_bolts a       { background-position: left -1245px; }
+
+
+#classes li.offline a:hover,
+#classes li.offline a:focus {
+  background-position: -121px 25px;
+}
+#classes li.storage a:hover,
+#classes li.storage a:focus {
+  background-position: -121px -117px;
+}
+#classes li.connectivity a:hover,
+#classes li.connectivity a:focus {
+  background-position: -121px -258px;
+}
+#classes li.file_access a:hover,
+#classes li.file_access a:focus {
+  background-position: -121px -399px;
+}
+#classes li.semantics a:hover,
+#classes li.semantics a:focus {
+  background-position: -121px -540px;
+}
+#classes li.multimedia a:hover,
+#classes li.multimedia a:focus {
+  background-position: -121px -681px;
+}
+#classes li.graphics a:hover,
+#classes li.graphics a:focus {
+  background-position: -121px -822px;
+}
+#classes li.presentation a:hover,
+#classes li.presentation a:focus {
+  background-position: -121px -963px;
+}
+#classes li.performance a:hover,
+#classes li.performance a:focus {
+  background-position: -121px -1104px;
+}
+#classes li.nuts_and_bolts a:hover,
+#classes li.nuts_and_bolts a:focus {
+  background-position: -121px -1245px;
+}
+
+ol.examples{
+  font-size:.9em;
+  line-height:1.4em;
+}
+ol.examples strong,
+ol.examples span{
+  display:block;
+}
+ol.examples li{
+  margin-bottom: .5em;
+}
+ol.examples span{
+    font-family: 'Inconsolata', sans-serif;
+    font-size:.8em;
+    line-height:1.2em;
+    padding:.3em .3em 0 .3em;
+}
+ol.examples a{
+  font-size:.8em;
+  color:#090;
+  text-shadow:none;
+  line-height:1em;
+}
+ol.examples a span{
+  font-size:1em;
+  line-height:1.4em;
+  padding:0 .3em;
+  display:inline-block;
+  border-radius:.5em;
+}
+ol.examples a:after{
+  content:'\00a0\232A';
+  font-size:.8em;
+}
+ol.examples a:before{
+  content:'\2329\00a0';
+  font-size:.8em;
+}
+ol.examples a:hover span{
+  background:#090;
+  color:#fff;
+  
+  -webkit-transition: all .5s;
+  -moz-transition:    all .5s;
+  -ms-transition:     all .5s;
+  -o-transition:      all .5s;
+  transition:         all .5s;
+}
+
+.red{
+  color:#c00;
+}
+
+#links ul{
+  float:left;
+  width:45%;
+}
+
+#links ul li{
+  font-size:.8em;
+  margin-bottom:.3em;
+}
+#links ul li a{
+  text-shadow:none;
+  margin:0 !important;
+  padding:0 !important;
+  line-height:1.2em;
+  height:auto !important;
+}
+#links ul li a span{
+  display: block;
+  color:#999;
+}

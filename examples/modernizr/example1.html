@@ -1,0 +1,67 @@
+<!doctype html>
+<!--
+There is a no-js class on the <html> element. Modernizr first removes this and replaces it with a js class, which could be useful in your CSS. Along with the js class, it adds classes for all the features the browser supports and for the features it does not support, pre-fixing those with no-.
+-->
+<html class="no-js" lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Hello Modernizr - Example #1</title>
+	<link rel="icon" type="image/png" href="../../favicon.png" />
+	<style>
+		html{
+			height:100%;
+		}
+		body{
+			margin:0;
+			padding:0;
+			height:100%;
+		}
+		#support{
+			font-size:3em;
+			margin-top:-1em;
+			position: absolute;
+			text-align:center;
+			top:50%;
+			width:100%;
+		}
+		.canvas body{
+			background: rgb(201,222,150);
+			background: -moz-linear-gradient(top,  rgb(201,222,150) 0%, rgb(138,182,107) 44%, rgb(57,130,53) 100%);
+			background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgb(201,222,150)), color-stop(44%,rgb(138,182,107)), color-stop(100%,rgb(57,130,53)));
+			background: -webkit-linear-gradient(top,  rgb(201,222,150) 0%,rgb(138,182,107) 44%,rgb(57,130,53) 100%);
+			background: -o-linear-gradient(top,  rgb(201,222,150) 0%,rgb(138,182,107) 44%,rgb(57,130,53) 100%);
+			background: -ms-linear-gradient(top,  rgb(201,222,150) 0%,rgb(138,182,107) 44%,rgb(57,130,53) 100%);
+			background: linear-gradient(top,  rgb(201,222,150) 0%,rgb(138,182,107) 44%,rgb(57,130,53) 100%);
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c9de96', endColorstr='#398235',GradientType=0 );
+			color:#fff;
+			text-shadow:1px 1px 2px rgba(0,0,0,.8);
+		}
+		.no-canvas body{
+			background: rgb(169,3,41);
+			background: -moz-linear-gradient(top,  rgb(169,3,41) 0%, rgb(143,2,34) 44%, rgb(109,0,25) 100%);
+			background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgb(169,3,41)), color-stop(44%,rgb(143,2,34)), color-stop(100%,rgb(109,0,25)));
+			background: -webkit-linear-gradient(top,  rgb(169,3,41) 0%,rgb(143,2,34) 44%,rgb(109,0,25) 100%);
+			background: -o-linear-gradient(top,  rgb(169,3,41) 0%,rgb(143,2,34) 44%,rgb(109,0,25) 100%);
+			background: -ms-linear-gradient(top,  rgb(169,3,41) 0%,rgb(143,2,34) 44%,rgb(109,0,25) 100%);
+			background: linear-gradient(top,  rgb(169,3,41) 0%,rgb(143,2,34) 44%,rgb(109,0,25) 100%);
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a90329', endColorstr='#6d0019',GradientType=0 );
+			color:#fff;
+			text-shadow:1px 1px 2px rgba(0,0,0,.8);
+		}
+	</style>
+	<script src="../../includes/js/modernizr.js"></script>
+</head>
+<body>
+	<div id="support"></div>
+	<script>
+		// get the div element above
+		var support = document.getElementById('support');
+		// set the text based on the support - the styles get declared with the css helpers in modernizr
+		if (Modernizr.canvas) {
+			support.innerHTML = "This browser supports HTML5 canvas!";
+		} else {
+			support.innerHTML = "no canvas :(";
+		}
+	</script>
+</body>
+</html>

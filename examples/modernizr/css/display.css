@@ -1,0 +1,92 @@
+html{
+	height:100%;
+}
+body{
+	background: rgb(214,249,255);
+	background: -moz-radial-gradient(center, ellipse cover,  rgb(214,249,255) 0%, rgb(158,232,250) 100%);
+	background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,rgb(214,249,255)), color-stop(100%,rgb(158,232,250)));
+	background: -webkit-radial-gradient(center, ellipse cover,  rgb(214,249,255) 0%,rgb(158,232,250) 100%);
+	background: -o-radial-gradient(center, ellipse cover,  rgb(214,249,255) 0%,rgb(158,232,250) 100%);
+	background: -ms-radial-gradient(center, ellipse cover,  rgb(214,249,255) 0%,rgb(158,232,250) 100%);
+	background: radial-gradient(center, ellipse cover,  rgb(214,249,255) 0%,rgb(158,232,250) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d6f9ff', endColorstr='#9ee8fa',GradientType=1 );
+	font-family:Ubuntu,sans-serif;
+	min-height:100%;
+}
+h1{
+	margin:0;
+}
+#login{
+	background:#fefefe;
+	border:1px solid #999;
+	border-radius:.5em;
+	box-shadow:0 0 10px rgba(0,0,0,.3);
+	height:220px;
+	left:50%;
+	margin:-130px 0 0 -200px;
+	padding:20px;
+	position: absolute;
+	top:50%;
+	width:360px;
+}
+#login h1,
+#login form{
+	margin-left:40px;
+}
+label{
+	display:block;
+	padding: .5em 0;
+}
+input[type=text],
+input[type=password]{
+	padding: .3em;
+	font-family: Menlo, Consolas, monospace;
+	width:250px;
+}
+.row{
+	margin-top:1em;
+}
+input[type=submit]{
+  background-color: #0074cc;
+  background-image: -moz-linear-gradient(top, #0088cc, #0055cc);
+  background-image: -ms-linear-gradient(top, #0088cc, #0055cc);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#0088cc), to(#0055cc));
+  background-image: -webkit-linear-gradient(top, #0088cc, #0055cc);
+  background-image: -o-linear-gradient(top, #0088cc, #0055cc);
+  background-image: linear-gradient(top, #0088cc, #0055cc);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#0088cc', endColorstr='#0055cc', GradientType=0);
+  border-color: #0055cc #0055cc #003580;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+  border-width:1px;
+  border-radius:.5em;
+  color:#fff;
+  text-shadow:1px 1px 0 #000;
+  padding:.5em 1em;
+}
+
+#requirements{
+	display:none;
+}
+
+.no-js body{
+	background:#c00;
+}
+.no-js #login{
+	display:none;
+}
+.no-js #requirements{
+	display:block;
+	color:#fff;
+	font-size:3em;
+	line-height:1em;
+	margin-top:-1.5em;
+	position: absolute;
+	text-align:center;
+	top:50%;
+	width:100%;
+}
+.no-js #requirements span:before{
+	content:'JavaScript is required to access this site';
+	text-shadow:1px 1px 1px #000;
+}

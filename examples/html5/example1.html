@@ -1,0 +1,31 @@
+<!doctype html>
+<!--
+There is a no-js class on the <html> element. Modernizr first removes this and replaces it with a js class, which could be useful in your CSS. Along with the js class, it adds classes for all the features the browser supports and for the features it does not support, pre-fixing those with no-.
+-->
+<html class="no-js" lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Hello Modernizr</title>
+	<link rel="icon" type="image/png" href="../../favicon.png" />
+	<link href="http://fonts.googleapis.com/css?family=Inconsolata|Ubuntu:300,400,500,700" rel="stylesheet" type="text/css" />
+    <link href="../../includes/css/normalize.css" rel="stylesheet" type="text/css" />
+	<link href="css/display.css" rel="stylesheet" type="text/css" />
+	<link href="../../includes/css/smoothness/jqueryui.1.8.18.css" rel="stylesheet" type="text/css" />
+	<script src="../../includes/js/modernizr.js"></script>
+</head>
+<body>
+	<div id="login">
+		<h1>Login</h1>
+		<form method="post" action="./">
+			<label for="username">Username</label>
+			<input type="text" name="username" id="username" placeholder="Username or Email" required />
+			<label for="pwd">Password</label>
+			<input type="password" name="pwd" id="pwd" placeholder="Password" required />
+			<div class="row">
+				<input type="submit" value="login" />
+			</div>
+		</form>
+	</div>
+	<div id="requirements"><span></span></div>
+</body>
+</html>

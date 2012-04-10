@@ -1,0 +1,65 @@
+<!doctype html>
+<!--
+There is a no-js class on the <html> element. Modernizr first removes this and replaces it with a js class, which could be useful in your CSS. Along with the js class, it adds classes for all the features the browser supports and for the features it does not support, pre-fixing those with no-.
+-->
+<html class="no-js" lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Hello Modernizr - Example #2</title>
+	<link rel="icon" type="image/png" href="../../favicon.png" />
+	<link href="http://fonts.googleapis.com/css?family=Inconsolata|Ubuntu:300,400,500,700" rel="stylesheet" type="text/css" />
+    <link href="../../includes/css/normalize.css" rel="stylesheet" type="text/css" />
+	<link href="css/display.css" rel="stylesheet" type="text/css" />
+	<link href="../../includes/css/smoothness/jqueryui.1.8.18.css" rel="stylesheet" type="text/css" />
+	<script src="../../includes/js/modernizr.js"></script>
+	<style>
+		body{
+			background:#eee;
+		}
+		form{
+			padding:1em;
+		}
+		#message{
+			display:block;
+			font-size:.9em;
+			padding:.6em 0;
+			color: #090;
+		}
+		.no-date{
+			color:#c00;
+			font-weight:500;
+		}
+	</style>
+</head>
+<body>
+	<form>
+		<label for="thedate">Date Selector</label>
+		<input type="date" name="thedate" id="thedate" value="" />
+		<span id="message"></span>
+	</form>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.js"></script>
+	<script>window.jQuery || document.write('<script src="../../includes/js/jquery.1.7.1.min.js"><\/script>')</script>
+	<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.8.18/jquery-ui.min.js"></script>
+	<script>window.jQuery.ui || document.write('<script src="../../includes/js/jquery.ui.1.8.18.js"><\/script>')</script>
+	<script>
+		// load different scripts based on test result then run a complete function
+		Modernizr.load({
+			test : Modernizr.inputtypes.date,
+			yep  : 'js/success.js',
+			nope : 'js/fail.js',
+			complete : function(){
+				if (Modernizr.inputtypes.date)
+					setMessage('no-date','This browser supports the HTML5 date input type');
+				else
+					setMessage('no-date','This browser does not support the HTML5 date input type and the jquery UI version will be used instead');
+			}
+		});
+
+		function setMessage(className,message){
+			var elem = document.getElementById('message');
+				elem.className = className;
+				elem.innerHTML = message;
+		}
+	</script>
+</body>
+</html>
