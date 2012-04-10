@@ -1,4 +1,4 @@
-ColdFusion User Group Meeting
+[South Florida ColdFusion Users Group](http://cfug-sfl.org/)
 =================
 
 March 2012 Presentation on Modernizr
@@ -12,4 +12,14 @@ Clone the repo, `git clone git@github.com:GiancarloGomez/cfug-sfl-2012.03.29-mod
 
 View the Examples!
 -----------
-You can see this presentation by going to [http://code.giancarlogomez.com/cfgroup/2012.03.29-modernizr/](http://code.giancarlogomez.com/cfgroup/2012.03.29-modernizr/)
+You can see this presentation by going to [http://code.giancarlogomez.com/cfug-sfl/2012.03.29-modernizr/](http://code.giancarlogomez.com/cfug-sfl/2012.03.29-modernizr/)
+
+
+Fan us on Facebook
+-----------
+[https://www.facebook.com/cfugsfl](https://www.facebook.com/cfugsfl)
+
+Follow us on Twitter
+-----------
+[http://twitter.com/#!/SFCFUG](http://twitter.com/#!/SFCFUG)
+
