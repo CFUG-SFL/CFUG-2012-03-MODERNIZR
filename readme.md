@@ -15,7 +15,7 @@ View the Examples!
 You can see this presentation by going to [http://code.giancarlogomez.com/cfug-sfl/2012.03.29-modernizr/](http://code.giancarlogomez.com/cfug-sfl/2012.03.29-modernizr/)
 
 
-Fan us on Facebook
+Like us on Facebook
 -----------
 [https://www.facebook.com/cfugsfl](https://www.facebook.com/cfugsfl)
 

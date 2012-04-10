@@ -222,6 +222,13 @@
 
     <div class="hint">Use a spacebar or arrow keys to navigate</div>
 
+    <div style="position: fixed; bottom: 10px; left: 10px; pointer-events: auto; z-index:3000;">
+    <iframe src="http://markdotto.github.com/github-buttons/github-btn.html?user=GiancarloGomez&repo=cfug-sfl-2012.03.29-modernizr&type=watch&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="110px" height="20px"></iframe>
+    <iframe src="http://markdotto.github.com/github-buttons/github-btn.html?user=bartaz&repo=cfug-sfl-2012.03.29-modernizr&type=fork&count=true"  allowtransparency="true" frameborder="0" scrolling="0" width="95px" height="20px"></iframe>
+    <a href="http://twitter.com/share" class="twitter-share-button" data-text="South Florida ColdFusion User Group Meeting on Modernizr @GiancarloGomez" data-url="http://github.com/GiancarloGomez/cfug-sfl-2012.03.29-modernizr" data-related="GiancarloGomez"></a>
+    <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+</div>
+
 	<script type="text/javascript" src="./includes/js/impress.js"></script>
 	<script type="text/javascript">
         if ("ontouchstart" in document.documentElement) { 
